@@ -137,7 +137,7 @@ jobs:
         name: Containerization
         needs: [unit-testing, code-coverage]
         permissions: 
-           packages: write
+           packages: write   # In order to give permissions to create organization when pushing image to GHCR 
         runs-on: ubuntu-latest
         steps:
         - name: Checkout Repo
