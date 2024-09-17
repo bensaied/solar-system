@@ -51,6 +51,7 @@ jobs:
           run: npm test
 
         - name: Archive Test Result
+          # if: steps.nodejs-unit-testing-step.outcome == "success"         # It will be executed only if the unit testing succeed; similar to success()
           if:  always() # It will be executed even if the unit testing failed 
           uses: actions/upload-artifact@v3
           with:
