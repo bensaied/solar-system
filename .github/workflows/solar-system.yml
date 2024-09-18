@@ -200,7 +200,7 @@ jobs:
         k8s-manifest-dir: kubernetes/development/
 
     dev-integration-testing:
-        if: contains(github.ref, 'feature/')
+        if: contains(github.ref, 'feature/')  # Execute job only if it runs from feature/.. branch
         name: Dev Integration Testing
         needs: dev-deploy
         runs-on: ubuntu-latest
